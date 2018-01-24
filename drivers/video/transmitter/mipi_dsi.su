@@ -1,0 +1,15 @@
+mipi_dsi.c:60:5:register_dsi_ops	0	static
+mipi_dsi.c:73:5:del_dsi_ops	8	static
+mipi_dsi.c:94:5:dsi_probe_current_chip	8	static
+mipi_dsi.c:126:5:dsi_power_up	8	static
+mipi_dsi.c:145:5:dsi_power_off	8	static
+mipi_dsi.c:165:5:dsi_set_regs	8	static
+mipi_dsi.c:185:5:dsi_init	8	static
+mipi_dsi.c:205:5:dsi_enable_video_mode	8	static
+mipi_dsi.c:226:5:dsi_enable_command_mode	8	static
+mipi_dsi.c:247:5:dsi_enable_hs_clk	8	static
+mipi_dsi.c:268:5:dsi_is_active	8	static
+mipi_dsi.c:288:5:dsi_is_enable	8	static
+mipi_dsi.c:309:5:dsi_send_dcs_packet	8	static
+mipi_dsi.c:330:5:dsi_read_dcs_packet	8	static
+mipi_dsi.c:350:5:dsi_send_packet	8	static

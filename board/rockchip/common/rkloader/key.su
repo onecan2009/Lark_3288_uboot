@@ -1,0 +1,7 @@
+key.c:48:12:GetPortState	24	static
+key.c:95:5:checkKey	16	static
+key.c:240:5:rkkey_power_state	8	static
+key.c:268:24:rkkey_get_powerkey	0	static
+key.c:279:6:key_init	16	static
+key.c:301:6:powerOn	0	static
+key.c:308:6:powerOff	0	static

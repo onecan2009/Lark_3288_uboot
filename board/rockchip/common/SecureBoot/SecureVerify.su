@@ -1,0 +1,12 @@
+SecureVerify.c:493:14:SecureRKModeChkPubkey	72	static
+SecureVerify.c:593:13:SecureRKModeVerifyLoader	2056	static
+SecureVerify.c:19:13:SecureNSModeVerifyLoader	520	static
+SecureVerify.c:50:13:SecureNSModeSignCheck	48	static
+SecureVerify.c:734:13:SecureRKModeVerifyBootImage	80	static
+SecureVerify.c:1044:6:SecureModeVerifyLoader	0	static
+SecureVerify.c:1056:6:SecureModeVerifyUbootImage	80	static
+SecureVerify.c:1068:6:SecureModeVerifyBootImage	48	static
+SecureVerify.c:1087:6:SecureModeBootImageCheck	24	static
+SecureVerify.c:1099:6:SecureModeRSAKeyCheck	40	static
+SecureVerify.c:1111:6:SecureModeLockLoader	0	static
+SecureVerify.c:1123:8:SecureModeInit	40	static

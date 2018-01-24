@@ -75,109 +75,114 @@ int backupboot_to_back(const disk_partition_t* src,const disk_partition_t *des)
 				free(buf_readfrom_src);
 				return ret;
 	}
-	/*
-	 * back up the rootfs to linuxfsbk
-	 * src: the src disk of linuxfs
-	 * des:the des disk of linuxfsbk
-	 * if success ,the return ret
-	 * 
-	 * 
-	 * 
-	 * */
-	int backfs(const disk_partition_t* src,const disk_partition_t *des)
-	{
-			int i=0;
-			int ret=0;
-			int ss=0;
-			int ss1=0;
-			char *buf_readfrom_src=(char *)memalign(64, 0x8000*512);
-			for(ss=512+64;ss<=512+192*16+64;ss++)
-			{
-				for(ss1=640;ss1<=664;ss1++)
-				{
-					lcd_setcolor_bypix(ss,ss1,0xffff);
-				}
-			}
-			for(i=0;i<192;i++)
-			{
-				memset(buf_readfrom_src,0,0x8000*512);
-				ret=StorageReadLba(src->start+i*0x8000,buf_readfrom_src, 0x8000);
-				ret=StorageWriteLba(des->start+i*0x8000, buf_readfrom_src,0x8000, 0);
-				//lcd_setba(4096,24,0x00af,(i+64)*16);
-				//udelay (500000*6);
-				//  process bar
-				for(ss=512+64+i*16;ss<=512+64+16*(i+1);ss++)
-				{
-					for(ss1=640;ss1<=664;ss1++)
-					{
-						lcd_setcolor_bypix(ss,ss1,0x008f);
-					}
-				}
-					if(ret !=0)
-					break;
-				}
-				free(buf_readfrom_src);
-				return ret;
-		}
+/*
+ * back up the rootfs to linuxfsbk
+ * src: the src disk of linuxfs
+ * des:the des disk of linuxfsbk
+ * if success ,the return ret
+ * 
+ * 
+ * 
+ * */
+int backfs(const disk_partition_t* src,const disk_partition_t *des)
+{
+    int i=0;
+    int ret=0;
+    int ss=0;
+    int ss1=0;
+    char *buf_readfrom_src=(char *)memalign(64, 0x8000*512);
+
+    for(ss=512+64;ss<=512+64+192*16;ss++)
+    {
+        for(ss1=640;ss1<=664;ss1++)
+        {
+            lcd_setcolor_bypix(ss,ss1,0xffff);
+        }
+    }
+
+    for(i=0;i<192;i++)
+    {
+        memset(buf_readfrom_src,0,0x8000*512);
+        ret=StorageReadLba(src->start+i*0x8000,buf_readfrom_src, 0x8000);
+        ret=StorageWriteLba(des->start+i*0x8000, buf_readfrom_src,0x8000, 0);
+        //lcd_setba(4096,24,0x00af,(i+64)*16);
+        //udelay (500000*6);
+        //  process bar
+        for(ss=512+64+i*16;ss<=512+64+16*(i+1);ss++)
+        {
+            for(ss1=640;ss1<=664;ss1++)
+            {
+                lcd_setcolor_bypix(ss,ss1,0x008f);
+            }
+        }
+    
+        if(ret !=0)
+        break;
+        
+    }
+    
+    free(buf_readfrom_src);
+    return ret;
+}
 		
-		/*
-	 * function discription:
-	 * function: read first byte in src section
-	* par1:src is section 
-	 * back value :if fail,then return -1,if not ,it return the first byte
-	 * */
-	unsigned int read_flag_of_backfs(const disk_partition_t* src)
-	{			
-			//	char buf[512] = {0};
-				char *buf = memalign(64,512);
-				char *p=NULL;
-				unsigned int ret=0;
-				p=&buf[4];
-				if(!StorageReadLba(src->start,buf,1))
-				{
-						memcpy(&ret,p,4);
-						free(buf);
-						return ret;
-				}
-					else
-				{
-						free(buf);
-						return -1;//read error
-				}
-				
-		}
-	/*
-	 * function discription:
-	 * function: read first byte in src section
-	* par1:src is section 
-	 * back value :if fail,then return -1,if not ,it return the first byte
-	 * */
-	unsigned int read_flag_of_back(const disk_partition_t* src)
-	{			
-				//char buf[512] = {0};
-				char *buf = memalign(64,512);
-				unsigned int ret=0;
-				if(!StorageReadLba(src->start,buf,1))
-				{
-				//		printf("buf[0] is %x\n",buf[0]);
-						memcpy(&ret,buf,4);
-						free(buf);
-						return ret;
-				}
-					else
-				{
-						free(buf);
-						return -1;//read error
-				}
-				
-		}
-		/*
-	 * function discription:
-	 * function: read first byte to src section
-	* par1:src is section 
-	* par2: flag_num to write
-	 * back value :if fail,then return -1,if not ,it return the 0
-	 * */
+/*
+ * function discription:
+ * function: read first byte in src section
+ * par1:src is section 
+ * back value :if fail,then return -1,if not ,it return the first byte
+ * */
+unsigned int read_flag_of_backfs(const disk_partition_t* src)
+{			
+        //	char buf[512] = {0};
+            char *buf = memalign(64,512);
+            char *p=NULL;
+            unsigned int ret=0;
+            p=&buf[4];
+            if(!StorageReadLba(src->start,buf,1))
+            {
+                    memcpy(&ret,p,4);
+                    free(buf);
+                    return ret;
+            }
+                else
+            {
+                    free(buf);
+                    return -1;//read error
+            }
+            
+    }
+/*
+ * function discription:
+ * function: read first byte in src section
+* par1:src is section 
+ * back value :if fail,then return -1,if not ,it return the first byte
+ * */
+unsigned int read_flag_of_back(const disk_partition_t* src)
+{			
+            //char buf[512] = {0};
+            char *buf = memalign(64,512);
+            unsigned int ret=0;
+            if(!StorageReadLba(src->start,buf,1))
+            {
+            //		printf("buf[0] is %x\n",buf[0]);
+                    memcpy(&ret,buf,4);
+                    free(buf);
+                    return ret;
+            }
+                else
+            {
+                    free(buf);
+                    return -1;//read error
+            }
+            
+    }
+    /*
+ * function discription:
+ * function: read first byte to src section
+* par1:src is section 
+* par2: flag_num to write
+ * back value :if fail,then return -1,if not ,it return the 0
+ * */
 int write_flag_of_back(const disk_partition_t *src,unsigned int flag_num)
 {
 	//	char buf[512]={0};
@@ -299,7 +304,7 @@ enum fbt_reboot_type board_fbt_get_reboot_type(void)
 				frt = FASTBOOT_REBOOT_NORMAL;
 				break;
 			case BOOT_LOADER:
-				printf("reboot to rockusb.\n");
+				//printf("reboot to rockusb.\n");
 				do_rockusb(NULL, 0, 0, NULL);
 				break;
 #ifdef CONFIG_CMD_FASTBOOT
@@ -318,7 +323,7 @@ enum fbt_reboot_type board_fbt_get_reboot_type(void)
 				frt = FASTBOOT_REBOOT_CHARGE;
 				break;
 			default:
-				printf("unsupport rk boot type %d\n", reboot_mode);
+				//printf("unsupport rk boot type %d\n", reboot_mode);
 				break;
 		}
 	}
@@ -347,7 +352,7 @@ int board_fbt_key_pressed(void)
 #if defined(CONFIG_RK_PWM_REMOTE)
 	ir_keycode = g_ir_keycode;
 #endif
-	printf("vbus = %d,boot_rockusb is %d,boot_recovery is %d,boot_fastboot is %d\n", vbus,boot_rockusb,boot_recovery,boot_fastboot);
+	//printf("vbus = %d,boot_rockusb is %d,boot_recovery is %d,boot_fastboot is %d\n", vbus,boot_rockusb,boot_recovery,boot_fastboot);
 	if((boot_recovery && (vbus==0)) || (ir_keycode  == KEY_POWER)) {
 		frt = FASTBOOT_REBOOT_RECOVERY;
 		LCD_clear("setghost.bmp");

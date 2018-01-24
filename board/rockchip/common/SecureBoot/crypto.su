@@ -1,0 +1,10 @@
+crypto.c:73:7:CryptoSHAInit	0	static
+crypto.c:93:7:CryptoSHAStart	16	static
+crypto.c:116:7:CryptoSHAEnd	0	static
+crypto.c:132:7:CryptoSHACheck	40	static
+crypto.c:156:7:CryptoRSAStart	24	static
+crypto.c:173:7:CryptoRSAEnd	0	static
+crypto.c:187:7:CryptoRSAInit	8	static
+crypto.c:195:7:CryptoRSACheck	72	static
+crypto.c:208:7:CryptoRSAVerify	16	static
+crypto.c:277:6:CryptoInit	0	static

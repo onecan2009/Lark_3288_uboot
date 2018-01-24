@@ -1,0 +1,7 @@
+pmic_rk818.c:109:5:rk818_regulator_disable	32	static
+pmic_rk818.c:131:5:rk818_regulator_enable	32	static
+pmic_rk818.c:312:5:pmic_rk818_init	88	static
+pmic_rk818.c:332:6:pmic_rk818_shut_down	32	static
+pmic_rk818.c:343:6:pmic_rk818_power_init	8	static
+pmic_rk818.c:349:6:pmic_rk818_power_on	8	static
+pmic_rk818.c:360:6:pmic_rk818_power_off	8	static

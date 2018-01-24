@@ -1,0 +1,12 @@
+parameter.c:232:12:ParseAtoi	0	static
+parameter.c:18:12:find_mtd_part	24	static
+parameter.c:63:22:memparse	8	static
+parameter.c:84:12:get_part	64	static
+parameter.c:375:5:CheckParam	8	static
+parameter.c:406:7:GetParam	24	static
+parameter.c:441:7:GetBackupParam	0	static
+parameter.c:447:7:BackupParam	0	static
+parameter.c:452:6:ParseParam	131128	static
+parameter.c:479:6:dump_disk_partitions	32	static
+parameter.c:491:25:get_disk_partition	8	static
+parameter.c:501:5:load_disk_partitions	16	static

@@ -455,29 +455,28 @@ int drv_lcd_init(void)
 void lcd_setcolor_bypix(int x,int y,int color)
 {
 	memset((char *)lcd_base+x+y*4096,color,1);
-		
-	}
+}
 void lcd_setba(int x,int y,int color,int xpos)
 {
 	unsigned char process_buf[24][4096];
 	int i=0;
 	int j=0;
 	for(i=0;i<24;i++)
-			{
-				for(j=0;j<4096;j++)
-					{
-						process_buf[i][j]=0xff;
-					}
-			}
+    {
+        for(j=0;j<4096;j++)
+        {
+            process_buf[i][j]=0xff;
+        }
+    }
 			
 	for(i=0;i<24;i++)
-		{
-			for(j=0;j<xpos;j++)
-			{
-				process_buf[i][j]=color;
-			}
-		}
-		memcpy((char *)lcd_base+(3584*768),&process_buf[0][0],x*y);
+    {
+        for(j=0;j<xpos;j++)
+        {
+            process_buf[i][j]=color;
+        }
+    }
+    memcpy((char *)lcd_base+(3584*768),&process_buf[0][0],x*y);
 	}
 void lcd_clear(const char * file_path)
 {

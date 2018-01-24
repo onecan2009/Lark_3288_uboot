@@ -412,7 +412,7 @@ int fdt_chosen(void *fdt)
 				return err;
 			}
 		} else {
-printf("err before str is %s\n,err is %d\n",str,err);
+//printf("err before str is %s\n,err is %d\n",str,err);
 //cmdline xcode
 			point=strstr(str,"str=");
 			point=point+strlen("str=");
@@ -422,7 +422,7 @@ printf("err before str is %s\n,err is %d\n",str,err);
 				}
 			memcpy(point,xx_str,sizeof(xx_str));
 //xcode over
-printf("xcode over ,str is %s\n,err is %d\n",str,err);
+//printf("xcode over ,str is %s\n,err is %d\n",str,err);
 			err = fdt_setprop(fdt, nodeoffset, "bootargs", str,
 					  strlen(str) + 1);
 printf("str is %s\n,err is %d\n",str,err);

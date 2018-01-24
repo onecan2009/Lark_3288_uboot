@@ -1,0 +1,15 @@
+chipDepend.c:17:6:DRVDelayUs	0	static
+chipDepend.c:29:6:DRVDelayMs	0	static
+chipDepend.c:36:6:CacheFlushDRegion	0	static
+chipDepend.c:44:6:CacheInvalidateDRegion	0	static
+chipDepend.c:55:8:IReadLoaderFlag	0	static
+chipDepend.c:68:6:ISetLoaderFlag	0	static
+chipDepend.c:88:8:GetMmcCLK	8	static
+chipDepend.c:116:6:EmmcPowerEn	0	static
+chipDepend.c:127:6:SDCReset	16	static
+chipDepend.c:162:5:SCUSelSDClk	0	static
+chipDepend.c:169:7:SCUSetSDClkFreq	0	static
+chipDepend.c:179:7:SCUSetTuning	0	static
+chipDepend.c:189:6:sdmmcGpioInit	0	static
+chipDepend.c:204:6:FW_NandDeInit	0	static
+chipDepend.c:328:6:rkplat_uart2UsbEn	0	static

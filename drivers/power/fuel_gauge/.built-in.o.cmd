@@ -1,0 +1,1 @@
+cmd_drivers/power/fuel_gauge/built-in.o :=  /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-ld.bfd     -r -o drivers/power/fuel_gauge/built-in.o drivers/power/fuel_gauge/fg_cw201x.o drivers/power/fuel_gauge/fg_ricoh619.o drivers/power/fuel_gauge/fg_rk818.o 

@@ -1,0 +1,15 @@
+hw_SDM.c:176:14:_DataErrorHandle	40	static
+hw_SDM.c:90:14:_ResponseTimeoutHandle	40	static
+hw_SDM.c:349:14:_SDMMC_Write	72	static
+hw_SDM.c:223:14:_SDMMC_Read	72	static
+hw_SDM.c:843:8:_GenerateRCA	0	static
+hw_SDM.c:869:8:_IsRCAUsable	0	static
+hw_SDM.c:892:7:_Identify_SendCmd	0	static
+hw_SDM.c:919:7:_Identify_SendAppCmd	40	static
+hw_SDM.c:959:6:SDM_Init	16	static
+hw_SDM.c:984:7:SDM_Open	8	static
+hw_SDM.c:1010:7:SDM_Close	0	static
+hw_SDM.c:1026:7:SDM_Read	48	static
+hw_SDM.c:1117:7:SDM_Write	48	static
+hw_SDM.c:1210:7:SDM_IOCtrl	168	static
+hw_SDM.c:1437:7:SDM_SendCmd	48	static

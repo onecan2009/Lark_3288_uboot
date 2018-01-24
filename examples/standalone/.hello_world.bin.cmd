@@ -1,0 +1,1 @@
+cmd_examples/standalone/hello_world.bin := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy -O binary  examples/standalone/hello_world examples/standalone/hello_world.bin

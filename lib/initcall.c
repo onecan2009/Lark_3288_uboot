@@ -24,7 +24,7 @@ int initcall_run_list(const init_fnc_t init_sequence[])
 			debug(" (relocated to %p)\n", (char *)*init_fnc_ptr);
 		else
 			debug("\n");
-		printf("we will does function is [[%d]]\n",i);
+//		printf("we will does function is [[%d]]\n",i);
 		ret = (*init_fnc_ptr)();
 		i++;
 		if (ret) {

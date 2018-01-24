@@ -1,0 +1,1 @@
+cmd_u-boot.srec := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy  -j .text -j .secure_text -j .rodata -j .hash -j .data -j .got.plt -j .u_boot_list -j .rel.dyn -j .loader_tag --gap-fill=0xff -O srec u-boot u-boot.srec

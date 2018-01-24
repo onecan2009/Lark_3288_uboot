@@ -99,6 +99,7 @@ typedef volatile unsigned char	vu_char;
 #define _DEBUG	0
 #endif
 
+
 /*
  * Output a debug text when condition "cond" is met. The "cond" should be
  * computed by a preprocessor in the best case, allowing for the best
@@ -109,9 +110,12 @@ typedef volatile unsigned char	vu_char;
 		if (cond)			\
 			printf(fmt, ##args);	\
 	} while (0)
-
+#ifdef DEBUG
 #define debug(fmt, args...)			\
 	debug_cond(_DEBUG, fmt, ##args)
+#else
+    #define debug(fmt, args...)
+#endif
 
 /*
  * An assertion is run-time check done in debug mode only. If DEBUG is not

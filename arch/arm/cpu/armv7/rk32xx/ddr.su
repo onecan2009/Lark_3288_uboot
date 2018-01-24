@@ -1,0 +1,2 @@
+ddr.c:18:5:dram_init	32	static
+ddr.c:55:6:dram_init_banksize	40	static

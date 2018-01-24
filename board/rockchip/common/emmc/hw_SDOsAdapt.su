@@ -1,0 +1,9 @@
+hw_SDOsAdapt.c:47:6:SDOAM_Delay	0	static
+hw_SDOsAdapt.c:137:6:SDOAM_SendMsg	0	static
+hw_SDOsAdapt.c:142:8:SDOAM_GetMsg	0	static
+hw_SDOsAdapt.c:147:8:SDOAM_CreateMutex	0	static
+hw_SDOsAdapt.c:162:6:SDOAM_RequestMutex	0	static
+hw_SDOsAdapt.c:166:6:SDOAM_ReleaseMutex	0	static
+hw_SDOsAdapt.c:171:8:SDOAM_CreateEvent	0	static
+hw_SDOsAdapt.c:186:6:SDOAM_SetEvent	0	static
+hw_SDOsAdapt.c:198:6:SDOAM_GetEvent	0	static

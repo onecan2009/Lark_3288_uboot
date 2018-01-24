@@ -1,0 +1,5 @@
+hw_SD.c:25:13:_SD_DecodeCID	0	static
+hw_SD.c:54:13:_SD_DecodeCSD	96	static
+hw_SD.c:104:13:_SD_SwitchFunction	176	dynamic,bounded
+hw_SD.c:323:8:SD1X_Init	64	static
+hw_SD.c:504:6:SD20_Init	72	static
