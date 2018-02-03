@@ -588,6 +588,71 @@ static void board_fbt_low_power_off(void)
 }
 #endif /* CONFIG_POWER_RK */
 
+/*read uboot */
+unsigned int read_uboot_cmdline(char *cmdline)
+{			
+    disk_partition_t* src = NULL;
+    char *buf= NULL;
+    
+    buf = memalign(64,1024);
+    src = get_disk_partition("uboot");
+    if(!StorageReadLba(src->start,buf,2))
+    {
+            memcpy(cmdline,buf,1024);
+            free(buf);
+            return 0;
+    }
+    else
+    {
+            free(buf);
+            return -1;//read error
+    }
+
+}
+
+// read rotate
+char read_rotate_flags()
+{			
+    char cmdline_str[1024]={0};
+    int i = 0;
+    int l1 = 1024;
+    int l2 = 0;
+    char disp_buf[]="disp=";
+    char * find_p = NULL;
+    
+    // get cmdline
+	read_uboot_cmdline(cmdline_str);
+    char * s1 = &cmdline_str[0];
+   
+  
+    l2 = strlen(disp_buf);
+    // get disp setting paremeter from cmdline
+    while (l1 >= l2) {
+		l1--;
+		if (!memcmp(s1,disp_buf,l2))
+        {
+            find_p = (char *) s1;
+            break;
+        }
+		s1++;
+	}
+    
+    // if rotate??
+    for(i = 0;i<sizeof("disp=1920*1080R0");i++)
+    {
+       if(*find_p == 'R')
+       {
+            find_p++;
+            return *find_p;
+       }
+       //printf("*find_p is %c\n",*find_p);
+       find_p++;
+    }
+
+    return 0;
+}
+
+
 
 /*
  * Determine if we should enter fastboot mode based on board specific
@@ -600,6 +665,7 @@ static void board_fbt_low_power_off(void)
 void board_fbt_preboot(void)
 {
 	enum fbt_reboot_type frt;
+    char rotate_flags = 0;
 #ifdef CONFIG_CMD_FASTBOOT
 	/* need to init this ASAP so we know the unlocked state */
 	fbt_fastboot_init();
@@ -617,7 +683,8 @@ void board_fbt_preboot(void)
 #ifdef CONFIG_POWER_RK
 	board_fbt_low_power_check();
 #endif
-
+  rotate_flags = read_rotate_flags();
+  printf("rotate_flags:%d\n",rotate_flags);
 #ifdef CONFIG_LCD
 	/* logo state defautl init = 0 */
 	g_logo_on_state = 0;
@@ -631,14 +698,21 @@ void board_fbt_preboot(void)
 	if (g_logo_on_state != 0) {
 		lcd_enable_logo(true);
 		drv_lcd_init();
-		lcd_clear("logo.bmp");
+        if(rotate_flags == '0')
+        {
+            lcd_clear("logo.bmp");
+        }
+        else if (rotate_flags == '1')
+        {
+            lcd_clear("rlogo.bmp");
+        }
 		lcd_enable();
 	}
 #endif
 
 //add test uint8_t uint8_t UsbConnectStatus(void)
-printf("add test usbconnectstatus\n");
-printf("ddUsbconnectStatus is %d\n",UsbConnectStatus());
+//printf("add test usbconnectstatus\n");
+//printf("ddUsbconnectStatus is %d\n",UsbConnectStatus());
 #if 1
 // add the copy process
 if(read_flag_of_back(get_disk_partition(BACKUP_NAME)) == FBOOTBK)

@@ -19,4 +19,6 @@ fastboot.c:457:5:board_fbt_handle_download	0	static
 fastboot.c:465:5:board_fbt_load_partition_table	0	static
 fastboot.c:470:25:board_fbt_get_partition	0	static
 fastboot.c:519:6:board_fbt_run_recovery_wipe_data	1096	static
-fastboot.c:600:6:board_fbt_preboot	16	static
+fastboot.c:592:14:read_uboot_cmdline	16	static
+fastboot.c:614:6:read_rotate_flags	1048	static
+fastboot.c:665:6:board_fbt_preboot	24	static
