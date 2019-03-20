@@ -1,1 +1,1 @@
-cmd_drivers/power/built-in.o :=  /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-ld.bfd     -r -o drivers/power/built-in.o drivers/power/power_core.o drivers/power/power_fdt.o drivers/power/power_rockchip.o drivers/power/power_i2c.o 
+cmd_drivers/power/built-in.o :=  /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-ld.bfd     -r -o drivers/power/built-in.o drivers/power/power_core.o drivers/power/power_fdt.o drivers/power/power_rockchip.o drivers/power/power_i2c.o 

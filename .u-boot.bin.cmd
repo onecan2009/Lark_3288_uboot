@@ -1,1 +1,1 @@
-cmd_u-boot.bin := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy  -j .text -j .secure_text -j .rodata -j .hash -j .data -j .got.plt -j .u_boot_list -j .rel.dyn -j .loader_tag --gap-fill=0xff -O binary u-boot u-boot.bin
+cmd_u-boot.bin := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy  -j .text -j .secure_text -j .rodata -j .hash -j .data -j .got.plt -j .u_boot_list -j .rel.dyn -j .loader_tag --gap-fill=0xff -O binary u-boot u-boot.bin

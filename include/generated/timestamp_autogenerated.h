@@ -1,3 +1,3 @@
-#define U_BOOT_DATE "Feb 02 2018"
-#define U_BOOT_TIME "15:30:01"
-#define U_BOOT_TIMESTAMP "2018-02-02_15:30:01"
+#define U_BOOT_DATE "Mar 20 2019"
+#define U_BOOT_TIME "17:02:45"
+#define U_BOOT_TIMESTAMP "2019-03-20_17:02:45"

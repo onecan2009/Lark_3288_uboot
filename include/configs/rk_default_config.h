@@ -412,6 +412,7 @@
 #ifdef CONFIG_PRODUCT_BOX
 #define CONFIG_RK_HDMI
 #endif
+#define CONFIG_RK_HDMI
 
 #define CONFIG_LCD_LOGO
 #define CONFIG_LCD_BMP_RLE8
@@ -435,7 +436,7 @@
 
 #ifdef CONFIG_RK_FB_DDREND
 /* support load bmp files for kernel logo */
-#define CONFIG_KERNEL_LOGO
+/*#define CONFIG_KERNEL_LOGO*/
 
 /* rk lcd total size = fb size + kernel logo size */
 #define CONFIG_RK_LCD_SIZE		SZ_32M

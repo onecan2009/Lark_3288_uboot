@@ -1,4 +1,4 @@
-cmd_arch/arm/lib/vectors.o := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,arch/arm/lib/.vectors.o.d  -nostdinc -isystem /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/rk3288-sdk/uboot_test/arch/arm/include -include /home/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000  -D__ASSEMBLY__ -g      -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe     -c -o arch/arm/lib/vectors.o arch/arm/lib/vectors.S
+cmd_arch/arm/lib/vectors.o := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,arch/arm/lib/.vectors.o.d  -nostdinc -isystem /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include -include /home/ubuntu/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000  -D__ASSEMBLY__ -g      -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe     -c -o arch/arm/lib/vectors.o arch/arm/lib/vectors.S
 
 source_arch/arm/lib/vectors.o := arch/arm/lib/vectors.S
 
@@ -9,7 +9,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/use/irq.h) \
   include/config.h \
     $(wildcard include/config/rkchip/rk3288.h) \
-    $(wildcard include/config/product/mid.h) \
+    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/boarddir.h) \
   include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
@@ -60,7 +60,6 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/rk/fb.h) \
     $(wildcard include/config/rk/pwm.h) \
     $(wildcard include/config/cmd/bmp.h) \
-    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/rk1000/tve.h) \
     $(wildcard include/config/gm7122/tve.h) \
     $(wildcard include/config/cmd/charge/anim.h) \
@@ -221,7 +220,7 @@ deps_arch/arm/lib/vectors.o := \
     $(wildcard include/config/cmd/default/h.h) \
     $(wildcard include/config/cmd/flash.h) \
     $(wildcard include/config/cmd/imls.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/sys/generic/global/data.h) \
     $(wildcard include/config/lmb.h) \

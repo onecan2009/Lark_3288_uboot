@@ -13,7 +13,7 @@ lcd.c:1359:14:lcd_logo	8	static
 lcd.c:542:6:LCD_clear	8	static
 lcd.c:481:6:lcd_clear	8	static
 lcd.c:604:12:do_lcd_clear	8	static
-lcd.c:1081:5:lcd_display_bitmap	624	static
+lcd.c:1081:5:lcd_display_bitmap	616	static
 lcd.c:1060:5:lcd_display_bitmap_center	8	static
 lcd.c:1435:5:lcd_get_pixel_width	0	static
 lcd.c:1440:5:lcd_get_pixel_height	0	static

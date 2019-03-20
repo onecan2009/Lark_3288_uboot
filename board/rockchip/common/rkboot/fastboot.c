@@ -715,49 +715,43 @@ void board_fbt_preboot(void)
 //printf("ddUsbconnectStatus is %d\n",UsbConnectStatus());
 #if 1
 // add the copy process
-if(read_flag_of_back(get_disk_partition(BACKUP_NAME)) == FBOOTBK)
-		{
+	if(read_flag_of_back(get_disk_partition(BACKUP_NAME)) == FBOOTBK)
+	{
 			LCD_clear("waitlogo.bmp");
 			if(!backupboot_to_back(get_disk_partition(BACKUPBOOT_NAME),get_disk_partition(BOOT_NAME)))
-				{
+			{
 					if(!write_flag_of_back(get_disk_partition(BACKUP_NAME),BOOTBK))
 					{
-		//				printf("flash copy over flag write ok\n");
+							//				printf("flash copy over flag write ok\n");
 					}
-					else
-							{
-			//					printf("flash copy over flag write error\n");
-								}
-				}
-				else{
-	//				printf("copy fail\n");
-				}
-		}
-		else if(read_flag_of_back(get_disk_partition(BACKUP_NAME)) ==  -1)
-		{
-	//			printf("read flag is error\n");
-			}
-	if(read_flag_of_backfs(get_disk_partition(BACKUP_NAME)) == FFSBK )
-		{
-			LCD_clear("waitlogo.bmp");
-			 if(!backfs(get_disk_partition(LINUXROOTBK_NAME),get_disk_partition( LINUXROOTFS_NAME)))
-				{
-					write_flag_of_backfs(get_disk_partition(BACKUP_NAME),FSBK);
-				}
 					else
 					{
-		//				printf("write fs flags num error\n");
+							//					printf("flash copy over flag write error\n");
 					}
-					//		LCD_clear("GFD-4.bmp");
-					//		mdelay(100);
-		 }
-		 
-		 else if (read_flag_of_backfs(get_disk_partition(BACKUP_NAME)) == -1)
- 		 {
-//			 printf("read fs flags error\n");
-			 }
-			 #endif
-//add over
+			}
+			else{
+					//				printf("copy fail\n");
+			}
+	}
+	else if(read_flag_of_back(get_disk_partition(BACKUP_NAME)) ==  -1)
+	{
+			//			printf("read flag is error\n");
+	}
+	if(read_flag_of_backfs(get_disk_partition(BACKUP_NAME)) == FFSBK )
+	{
+			LCD_clear("waitlogo.bmp");
+			if(!backfs(get_disk_partition(LINUXROOTBK_NAME),get_disk_partition( LINUXROOTFS_NAME)))
+			{
+					write_flag_of_backfs(get_disk_partition(BACKUP_NAME),FSBK);
+			}
+	}
+
+	else if (read_flag_of_backfs(get_disk_partition(BACKUP_NAME)) == -1)
+	{
+			//			 printf("read fs flags error\n");
+	}
+#endif
+	//add over
 #ifdef CONFIG_POWER_RK
 	board_fbt_low_power_off();
 #endif

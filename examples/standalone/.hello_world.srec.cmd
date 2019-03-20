@@ -1,1 +1,1 @@
-cmd_examples/standalone/hello_world.srec := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy -O srec  examples/standalone/hello_world examples/standalone/hello_world.srec
+cmd_examples/standalone/hello_world.srec := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-objcopy -O srec  examples/standalone/hello_world examples/standalone/hello_world.srec

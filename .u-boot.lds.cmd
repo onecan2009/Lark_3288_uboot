@@ -1,6 +1,6 @@
-cmd_u-boot.lds := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -E -Wp,-MD,./.u-boot.lds.d -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000   -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe -Iinclude  -I/home/rk3288-sdk/uboot_test/arch/arm/include -include /home/rk3288-sdk/uboot_test/include/linux/kconfig.h  -nostdinc -isystem /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -include /home/rk3288-sdk/uboot_test/include/u-boot/u-boot.lds.h -DCPUDIR=arch/arm/cpu/armv7  -ansi -D__ASSEMBLY__ -x assembler-with-cpp -P -o u-boot.lds /home/rk3288-sdk/uboot_test/arch/arm/cpu/u-boot.lds
+cmd_u-boot.lds := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -E -Wp,-MD,./.u-boot.lds.d -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000   -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe -Iinclude  -I/home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include -include /home/ubuntu/rk3288-sdk/uboot_test/include/linux/kconfig.h  -nostdinc -isystem /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -include /home/ubuntu/rk3288-sdk/uboot_test/include/u-boot/u-boot.lds.h -DCPUDIR=arch/arm/cpu/armv7  -ansi -D__ASSEMBLY__ -x assembler-with-cpp -P -o u-boot.lds /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/cpu/u-boot.lds
 
-source_u-boot.lds := /home/rk3288-sdk/uboot_test/arch/arm/cpu/u-boot.lds
+source_u-boot.lds := /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/cpu/u-boot.lds
 
 deps_u-boot.lds := \
     $(wildcard include/config/armv7/nonsec.h) \
@@ -8,10 +8,10 @@ deps_u-boot.lds := \
     $(wildcard include/config/armv7/psci.h) \
     $(wildcard include/config/armv7/secure/base.h) \
     $(wildcard include/config/rockchip.h) \
-  /home/rk3288-sdk/uboot_test/include/u-boot/u-boot.lds.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/include/u-boot/u-boot.lds.h \
   include/config.h \
     $(wildcard include/config/rkchip/rk3288.h) \
-    $(wildcard include/config/product/mid.h) \
+    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/boarddir.h) \
   include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
@@ -62,7 +62,6 @@ deps_u-boot.lds := \
     $(wildcard include/config/rk/fb.h) \
     $(wildcard include/config/rk/pwm.h) \
     $(wildcard include/config/cmd/bmp.h) \
-    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/rk1000/tve.h) \
     $(wildcard include/config/gm7122/tve.h) \
     $(wildcard include/config/cmd/charge/anim.h) \
@@ -224,7 +223,7 @@ deps_u-boot.lds := \
     $(wildcard include/config/cmd/default/h.h) \
     $(wildcard include/config/cmd/flash.h) \
     $(wildcard include/config/cmd/imls.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/sys/generic/global/data.h) \
     $(wildcard include/config/lmb.h) \

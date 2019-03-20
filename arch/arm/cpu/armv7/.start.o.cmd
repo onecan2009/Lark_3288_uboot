@@ -1,4 +1,4 @@
-cmd_arch/arm/cpu/armv7/start.o := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,arch/arm/cpu/armv7/.start.o.d  -nostdinc -isystem /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/rk3288-sdk/uboot_test/arch/arm/include -include /home/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000  -D__ASSEMBLY__ -g      -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe     -c -o arch/arm/cpu/armv7/start.o arch/arm/cpu/armv7/start.S
+cmd_arch/arm/cpu/armv7/start.o := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,arch/arm/cpu/armv7/.start.o.d  -nostdinc -isystem /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include -include /home/ubuntu/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000  -D__ASSEMBLY__ -g      -D__ARM__ -marm -mno-thumb-interwork  -mabi=aapcs-linux  -mword-relocations  -march=armv7-a  -mno-unaligned-access  -ffunction-sections -fdata-sections -fno-common -ffixed-r9  -msoft-float  -pipe     -c -o arch/arm/cpu/armv7/start.o arch/arm/cpu/armv7/start.S
 
 source_arch/arm/cpu/armv7/start.o := arch/arm/cpu/armv7/start.S
 
@@ -18,7 +18,7 @@ deps_arch/arm/cpu/armv7/start.o := \
   include/asm-offsets.h \
   include/generated/generic-asm-offsets.h \
   include/config.h \
-    $(wildcard include/config/product/mid.h) \
+    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/boarddir.h) \
   include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
@@ -69,7 +69,6 @@ deps_arch/arm/cpu/armv7/start.o := \
     $(wildcard include/config/rk/fb.h) \
     $(wildcard include/config/rk/pwm.h) \
     $(wildcard include/config/cmd/bmp.h) \
-    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/rk1000/tve.h) \
     $(wildcard include/config/gm7122/tve.h) \
     $(wildcard include/config/cmd/charge/anim.h) \
@@ -230,7 +229,7 @@ deps_arch/arm/cpu/armv7/start.o := \
     $(wildcard include/config/cmd/default/h.h) \
     $(wildcard include/config/cmd/flash.h) \
     $(wildcard include/config/cmd/imls.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/sys/generic/global/data.h) \
     $(wildcard include/config/lmb.h) \
@@ -282,9 +281,9 @@ deps_arch/arm/cpu/armv7/start.o := \
     $(wildcard include/config/cmd/sntp.h) \
     $(wildcard include/config/cmd/tftpput.h) \
     $(wildcard include/config/cmd/tftpsrv.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/system.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/system.h \
   include/linux/linkage.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/linkage.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/linkage.h \
 
 arch/arm/cpu/armv7/start.o: $(deps_arch/arm/cpu/armv7/start.o)
 

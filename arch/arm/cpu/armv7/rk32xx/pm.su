@@ -1,3 +1,2 @@
-pm.c:27:6:rk_pm_wakeup_gpio_init	8	static
-pm.c:51:6:rk_pm_wakeup_gpio_deinit	8	static
-pm.c:74:6:rk_pm_enter	8	static
+pm.c:107:6:rk_pm_wakeup_gpio_init	0	static
+pm.c:108:6:rk_pm_enter	0	static

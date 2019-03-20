@@ -14,14 +14,14 @@
 @	compiled by GNU C version 4.6.x-google 20120106 (prerelease), GMP version 5.0.5, MPFR version 2.4.1, MPC version 0.8.1
 @ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 @ options passed:  -nostdinc -I include
-@ -I /home/rk3288-sdk/uboot_test/arch/arm/include
-@ -iprefix /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/
+@ -I /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include
+@ -iprefix /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/
 @ -D__USES_INITFINI__ -D __KERNEL__ -D __UBOOT__
 @ -D CONFIG_SYS_TEXT_BASE=0x00000000 -D __ARM__ -D DO_DEPS_ONLY
 @ -D KBUILD_STR(s)=#s -D KBUILD_BASENAME=KBUILD_STR(asm_offsets)
 @ -D KBUILD_MODNAME=KBUILD_STR(asm_offsets)
-@ -isystem /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include
-@ -include /home/rk3288-sdk/uboot_test/include/linux/kconfig.h
+@ -isystem /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include
+@ -include /home/ubuntu/rk3288-sdk/uboot_test/include/linux/kconfig.h
 @ -MD lib/.asm-offsets.s.d lib/asm-offsets.c -marm -mno-thumb-interwork
 @ -mabi=aapcs-linux -mword-relocations -march=armv7-a -mno-unaligned-access
 @ -mfloat-abi=soft -mfpu=vfp -auxbase-strip lib/asm-offsets.s -g -Os -Wall
@@ -121,7 +121,7 @@ main:
 	.size	main, .-main
 	.text
 .Letext0:
-	.file 2 "/home/rk3288-sdk/uboot_test/arch/arm/include/asm/types.h"
+	.file 2 "/home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/types.h"
 	.file 3 "include/linux/types.h"
 	.file 4 "include/asm-generic/u-boot.h"
 	.file 5 "include/net.h"
@@ -930,8 +930,8 @@ main:
 	.section	.debug_line,"",%progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",%progbits,1
-.LASF6:
-	.ascii	"long long int\000"
+.LASF54:
+	.ascii	"eth_current\000"
 .LASF22:
 	.ascii	"bi_arm_freq\000"
 .LASF27:
@@ -990,6 +990,8 @@ main:
 	.ascii	"main\000"
 .LASF20:
 	.ascii	"bi_sramstart\000"
+.LASF58:
+	.ascii	"/home/ubuntu/rk3288-sdk/uboot_test\000"
 .LASF33:
 	.ascii	"bi_dram\000"
 .LASF12:
@@ -1004,16 +1006,14 @@ main:
 	.ascii	"long long unsigned int\000"
 .LASF16:
 	.ascii	"bi_memsize\000"
-.LASF46:
-	.ascii	"write_hwaddr\000"
 .LASF8:
 	.ascii	"phys_size_t\000"
 .LASF37:
 	.ascii	"eth_device\000"
 .LASF9:
 	.ascii	"sizetype\000"
-.LASF58:
-	.ascii	"/home/rk3288-sdk/uboot_test\000"
+.LASF6:
+	.ascii	"long long int\000"
 .LASF51:
 	.ascii	"NETLOOP_RESTART\000"
 .LASF52:
@@ -1038,8 +1038,8 @@ main:
 	.ascii	"bi_boot_params\000"
 .LASF3:
 	.ascii	"signed char\000"
-.LASF54:
-	.ascii	"eth_current\000"
+.LASF46:
+	.ascii	"write_hwaddr\000"
 .LASF47:
 	.ascii	"next\000"
 .LASF34:

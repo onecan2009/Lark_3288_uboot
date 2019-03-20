@@ -1,4 +1,4 @@
-cmd_common/board_f.o := /home/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,common/.board_f.o.d  -nostdinc -isystem /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/rk3288-sdk/uboot_test/arch/arm/include -include /home/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -march=armv7-a -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(board_f)"  -D"KBUILD_MODNAME=KBUILD_STR(board_f)" -c -o common/board_f.o common/board_f.c
+cmd_common/board_f.o := /home/ubuntu/rk3288-sdk/uboot_test/../prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/arm-eabi-gcc -Wp,-MD,common/.board_f.o.d  -nostdinc -isystem /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include -Iinclude  -I/home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include -include /home/ubuntu/rk3288-sdk/uboot_test/include/linux/kconfig.h -D__KERNEL__ -D__UBOOT__ -DCONFIG_SYS_TEXT_BASE=0x00000000 -Wall -Wstrict-prototypes -Wno-format-security -fno-builtin -ffreestanding -Os -fno-stack-protector -g -fstack-usage -Wno-format-nonliteral -D__ARM__ -marm -mno-thumb-interwork -mabi=aapcs-linux -mword-relocations -march=armv7-a -mno-unaligned-access -ffunction-sections -fdata-sections -fno-common -ffixed-r9 -msoft-float -pipe    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(board_f)"  -D"KBUILD_MODNAME=KBUILD_STR(board_f)" -c -o common/board_f.o common/board_f.c
 
 source_common/board_f.o := common/board_f.c
 
@@ -174,7 +174,7 @@ deps_common/board_f.o := \
     $(wildcard include/config/skip/lowlevel/init.h) \
   include/config.h \
     $(wildcard include/config/rkchip/rk3288.h) \
-    $(wildcard include/config/product/mid.h) \
+    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/boarddir.h) \
   include/config_defaults.h \
     $(wildcard include/config/defaults/h/.h) \
@@ -221,7 +221,6 @@ deps_common/board_f.o := \
     $(wildcard include/config/rk/fb.h) \
     $(wildcard include/config/rk/pwm.h) \
     $(wildcard include/config/cmd/bmp.h) \
-    $(wildcard include/config/product/box.h) \
     $(wildcard include/config/rk1000/tve.h) \
     $(wildcard include/config/gm7122/tve.h) \
     $(wildcard include/config/cmd/charge/anim.h) \
@@ -365,7 +364,7 @@ deps_common/board_f.o := \
     $(wildcard include/config/cmd/default/h.h) \
     $(wildcard include/config/cmd/flash.h) \
     $(wildcard include/config/cmd/imls.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/config.h \
     $(wildcard include/config/h/.h) \
     $(wildcard include/config/lmb.h) \
     $(wildcard include/config/sys/boot/ramdisk/high.h) \
@@ -417,9 +416,9 @@ deps_common/board_f.o := \
   include/asm-offsets.h \
   include/generated/generic-asm-offsets.h \
   include/linux/bitops.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/types.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/bitops.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/proc-armv/system.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/types.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/bitops.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/proc-armv/system.h \
     $(wildcard include/config/cpu/sa1100.h) \
     $(wildcard include/config/cpu/sa110.h) \
   include/linux/types.h \
@@ -427,18 +426,18 @@ deps_common/board_f.o := \
     $(wildcard include/config/use/stdint.h) \
   include/linux/posix_types.h \
   include/linux/stddef.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/posix_types.h \
-  /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stdbool.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/posix_types.h \
+  /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stdbool.h \
   include/linux/string.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/string.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/string.h \
     $(wildcard include/config/use/arch/memcpy.h) \
     $(wildcard include/config/use/arch/memset.h) \
   include/linux/linux_string.h \
   include/linux/stringify.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/ptrace.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/proc-armv/ptrace.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/ptrace.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/proc-armv/ptrace.h \
     $(wildcard include/config/arm/thumb.h) \
-  /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stdarg.h \
+  /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stdarg.h \
   include/part.h \
     $(wildcard include/config/lba48.h) \
     $(wildcard include/config/mac/partition.h) \
@@ -480,8 +479,8 @@ deps_common/board_f.o := \
     $(wildcard include/config/fit/best/match.h) \
     $(wildcard include/config/android/boot/image.h) \
   include/compiler.h \
-  /home/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stddef.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/byteorder.h \
+  /home/ubuntu/rk3288-sdk/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7/bin/../lib/gcc/arm-eabi/4.7/include/stddef.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/compiler.h \
     $(wildcard include/config/sparse/rcu/pointer.h) \
@@ -498,7 +497,7 @@ deps_common/board_f.o := \
   include/linux/byteorder/swab.h \
   include/linux/byteorder/generic.h \
   include/lmb.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/u-boot.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/u-boot.h \
   include/asm-generic/u-boot.h \
     $(wildcard include/config/405.h) \
     $(wildcard include/config/405ez.h) \
@@ -516,7 +515,7 @@ deps_common/board_f.o := \
     $(wildcard include/config/cmd/bootm.h) \
     $(wildcard include/config/needs/manual/reloc.h) \
   include/linker_lists.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/global_data.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/global_data.h \
     $(wildcard include/config/omap.h) \
     $(wildcard include/config/at91family.h) \
     $(wildcard include/config/rkchip/rk3368.h) \
@@ -528,7 +527,7 @@ deps_common/board_f.o := \
     $(wildcard include/config/sys/i2c/mxc.h) \
   include/linux/list.h \
   include/linux/poison.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/mach-types.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/mach-types.h \
     $(wildcard include/config/arch/ebsa110.h) \
     $(wildcard include/config/arch/rpc.h) \
     $(wildcard include/config/arch/ebsa285.h) \
@@ -1624,8 +1623,8 @@ deps_common/board_f.o := \
     $(wildcard include/config/mach/armadillo800eva.h) \
     $(wildcard include/config/mach/kzm9g.h) \
     $(wildcard include/config/mach/colibri/t30.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/setup.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/u-boot-arm.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/setup.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/u-boot-arm.h \
   include/uuid.h \
   include/vsprintf.h \
   include/u-boot/crc.h \
@@ -1634,9 +1633,9 @@ deps_common/board_f.o := \
     $(wildcard include/config/mcast/tftp.h) \
     $(wildcard include/config/bootp/dns2.h) \
     $(wildcard include/config/netconsole.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/cache.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/cache.h \
     $(wildcard include/config/sys/cacheline/size.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/system.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/system.h \
   include/bootstage.h \
     $(wildcard include/config/bootstage/user/count.h) \
     $(wildcard include/config/bootstage.h) \
@@ -1740,8 +1739,8 @@ deps_common/board_f.o := \
     $(wildcard include/config/sys/post/coproc.h) \
     $(wildcard include/config/sys/post/flash.h) \
     $(wildcard include/config/sys/post/mem/regions.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/io.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/memory.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/io.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/memory.h \
     $(wildcard include/config/discontigmem.h) \
   include/iotrace.h \
     $(wildcard include/config/io/trace.h) \
@@ -1762,15 +1761,15 @@ deps_common/board_f.o := \
   include/trace.h \
     $(wildcard include/config/trace/early.h) \
   include/watchdog.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/errno.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/sections.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/sections.h \
   include/asm-generic/sections.h \
   include/dm/root.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rkplat.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rkplat.h \
   include/malloc.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/typedef.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cpu.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/typedef.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cpu.h \
     $(wildcard include/config/rk3036.h) \
     $(wildcard include/config/rk3066.h) \
     $(wildcard include/config/rk3126.h) \
@@ -1779,27 +1778,27 @@ deps_common/board_f.o := \
     $(wildcard include/config/rk3188.h) \
     $(wildcard include/config/rk3188/plus.h) \
     $(wildcard include/config/rk3288.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/io.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/io-rk3288.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pmu.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pmu-rk3288.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/grf.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/grf-rk3288.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cru.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cru-rk3288.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/irqs.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/irqs-rk3288.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/gpio.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rkplat.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/gpio-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/io.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/io-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pmu.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pmu-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/grf.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/grf-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cru.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/cru-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/irqs.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/irqs-rk3288.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/gpio.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rkplat.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/gpio-rk3288.h \
     $(wildcard include/config/use/rkirq.h) \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/iomux.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/clock.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/typedef.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/uart.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pwm.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rk_i2c.h \
-  /home/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pm.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/iomux.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/clock.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/typedef.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/uart.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pwm.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/rk_i2c.h \
+  /home/ubuntu/rk3288-sdk/uboot_test/arch/arm/include/asm/arch/pm.h \
 
 common/board_f.o: $(deps_common/board_f.o)
 

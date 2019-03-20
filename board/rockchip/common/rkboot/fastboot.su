@@ -9,7 +9,7 @@ fastboot.c:490:13:board_fbt_run_recovery	8	static
 fastboot.c:251:5:board_fbt_is_charging	0	static
 fastboot.c:260:6:board_fbt_set_reboot_type	8	static
 fastboot.c:285:22:board_fbt_get_reboot_type	16	static
-fastboot.c:341:5:board_fbt_key_pressed	24	static
+fastboot.c:341:5:board_fbt_key_pressed	32	static
 fastboot.c:387:6:board_fbt_finalize_bootargs	24	static
 fastboot.c:400:6:board_fbt_boot_failed	24	static
 fastboot.c:437:5:board_fbt_oem	0	static

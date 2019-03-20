@@ -6,9 +6,9 @@ deps_scripts/kconfig/mconf.o := \
     $(wildcard include/config/mode.h) \
     $(wildcard include/config/color.h) \
     $(wildcard include/config/.h) \
+  /usr/include/stdc-predef.h \
   /usr/include/ctype.h \
   /usr/include/features.h \
-  /usr/include/x86_64-linux-gnu/bits/predefs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -18,6 +18,7 @@ deps_scripts/kconfig/mconf.o := \
   /usr/include/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/xlocale.h \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -27,9 +28,23 @@ deps_scripts/kconfig/mconf.o := \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
   /usr/include/time.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+  /usr/include/stdlib.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/sigset.h \
@@ -37,20 +52,9 @@ deps_scripts/kconfig/mconf.o := \
   /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl2.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/string.h \
@@ -88,11 +92,11 @@ deps_scripts/kconfig/mconf.o := \
   /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   scripts/kconfig/list.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdbool.h \
   /usr/include/libintl.h \
   scripts/kconfig/lkc_proto.h \
   scripts/kconfig/lxdialog/dialog.h \
-  /usr/include/ncurses.h \
+  /usr/include/curses.h \
   /usr/include/ncurses_dll.h \
   /usr/include/unctrl.h \
   /usr/include/curses.h \
